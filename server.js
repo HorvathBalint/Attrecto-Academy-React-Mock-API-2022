@@ -19,7 +19,7 @@ server.use((req, res, next) => {
 });
 
 server.use((req, res, next) => {
-  if (isAuthorized(req)) {
+  if (isAuthorized(req) || req.path === "/login") {
     // add your authorization logic here
     next(); // continue to JSON Server router
   } else {

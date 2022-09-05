@@ -1,8 +1,7 @@
 const jwt = require("jsonwebtoken");
 
 const isAuthorized = function (req) {
-  return true;
-  // return !!req.headers.authorization;
+  return !!req.headers.authorization;
 };
 
 const getToken = function (email) {
